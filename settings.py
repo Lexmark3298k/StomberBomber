@@ -1,18 +1,17 @@
 """
 Stomber Bomber - Configuración del juego
-Estilo DOS / Retro
 """
 
 import pygame
 
-# ==================== CONFIGURACIÓN DE PANTALLA ====================
+# Configuración de pantalla
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 TILE_SIZE = 50
 FPS = 60
 WINDOW_TITLE = "STOMBER BOMBER - Jurassic Mayhem"
 
-# ==================== COLORES (Paleta DOS) ====================
+# Colores
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -28,7 +27,7 @@ DARK_RED = (139, 0, 0)
 GRAY = (128, 128, 128)
 DARK_GRAY = (64, 64, 64)
 
-# Colores específicos del juego
+# Colores específicos
 LASER_COLOR = (255, 50, 50)
 BUTTON_COLOR = (100, 100, 255)
 RAPTOR_COLOR = (150, 150, 255)
@@ -37,23 +36,24 @@ BOSS_COLOR = (30, 30, 30)
 HEALTH_BAR_COLOR = (255, 0, 0)
 HEALTH_BG_COLOR = (64, 0, 0)
 
-# ==================== VELOCIDADES ====================
+# Velocidades
 PLAYER_SPEED = 5
-PLAYER_SHOT_COOLDOWN = 500
+PLAYER_SHOT_COOLDOWN = 20  # frames
 
 PATROL_SPEED = 2
 CHASE_SPEED = 4
 BOSS_SPEED = 2
 
-# ==================== SISTEMA DE VISIÓN ====================
+# Sistema de visión
 VISION_RANGE = 300
 VISION_ANGLE = 90
 
-# ==================== DATOS DEL JUGADOR ====================
+# Datos iniciales del jugador
 PLAYER_START_HEALTH = 100
 PLAYER_START_KEYS = 0
+PLAYER_START_AMMO = 30
 
-# ==================== CONFIGURACIÓN DE NIVELES ====================
+# Configuración de niveles
 LEVELS = {
     1: "Salon 1: Carnicería Cretácica",
     2: "Salon 2: Sala de los Ecos",
@@ -62,12 +62,11 @@ LEVELS = {
     5: "Salon 5: Danza con Dante"
 }
 
-# ==================== RUTAS DE ASSETS ====================
+# Rutas de assets
 FONT_PATH = "assets/fonts/press_start.ttf"
 SOUNDS_PATH = "assets/sounds/"
 SPRITES_PATH = "assets/sprites/"
 
-# ==================== INICIALIZAR PYGAME ====================
 def init_pygame():
     """Inicializa pygame y devuelve la pantalla"""
     pygame.init()
