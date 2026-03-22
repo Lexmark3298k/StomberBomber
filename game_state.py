@@ -5,6 +5,7 @@ Game State Manager - Maneja la transición entre niveles
 import pygame
 from levels.salon1 import Salon1
 from levels.salon2 import Salon2
+from levels.salon3 import Salon3  # Agregar al inicio
 from settings import SCREEN_WIDTH, SCREEN_HEIGHT, BLACK, WHITE, YELLOW
 
 class GameState:
@@ -38,9 +39,8 @@ class GameState:
             self.level = Salon2(self.screen, self.player_data)
             print("Cargando Salón 2: Sigilo")
         elif self.current_level == 3:
-            # self.level = Salon3(self.screen, self.player_data)
-            print("Salón 3: Próximamente")
-            return "victory"  # Temporalmente victoria
+            self.level = Salon3(self.screen, self.player_data)
+            print("Cargando Salón 3: Láseres")
         elif self.current_level == 4:
             # self.level = Salon4(self.screen, self.player_data)
             print("Salón 4: Próximamente")
